@@ -1,10 +1,13 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+// import Image from 'next/image'
+// import styles from '../styles/Home.module.css'
 import Jumbotron from '../components/jumbotron/Jumbotron';
-import styled from 'styled-components';
+import Card from '../components/card/Card';
+import Framer from '../components/framer/Framer';
+import CardWrapper from '../components/card/CardWrapper';
+// import styled from 'styled-components';
 
 const Home: NextPage = () => {
 	return (
@@ -22,6 +25,21 @@ const Home: NextPage = () => {
 					subTitle='A movie about alaf telling ultimate truths'
 					imgUrl='/static/david.jpg'
 				/>
+
+				<CardWrapper>
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+					<Card imgUrl="/static/david.jpg" size="lg" />
+				</CardWrapper>
+				
+				
 			</div>
 		</div>
 	);

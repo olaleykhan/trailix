@@ -6,10 +6,10 @@ const Container = styled.div`
 	margin: 0 auto;
 	/* min-height: 100vh; */
 `;
-export const BaseButton = styled.button<{ rounded: boolean }>`
-	padding: 0.8rem 3rem;
+export const BaseButton = styled.button<{ rounded?: boolean,  }>`
+	padding: 0.8rem 2rem;
 	font-weight: 500;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	border: none;
 	color: var(--black);
 	background-color: var(--white10);
@@ -23,4 +23,7 @@ export const BaseButton = styled.button<{ rounded: boolean }>`
 	border-radius: ${({ rounded }) => (rounded ? '1.6rem' : 'none')};
 `;
 
-export const Button = styled(BaseButton)``;
+export const Button = styled(BaseButton) <{ inverted?: boolean }>`
+${(props)=>props.inverted? "background-color: var(--black);	color: var(--white10);": "" }
+
+	`;
